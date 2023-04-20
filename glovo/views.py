@@ -3,6 +3,6 @@ from .models import Order
 from django.http import HttpResponse
 
 
-def order(request):
+def order():
     orders = Order.objects.all()
-    return orders(HttpResponse)
+    return HttpResponse(orders)

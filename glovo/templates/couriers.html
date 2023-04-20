@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <table class="table table-hover table-dark">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Name</th>
+      <th scope="col">Phone</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% if couriers %}
+
+      {% for courier in couriers %}
+        <tr>
+          <th scope="row">{{ courier.id }}</th>
+          <td>{{ courier.fullname }}</td>
+          <td>{{ courier.phone_number }}</td>
+        </tr>
+      {% endfor %}
+    {% endif %}
+  </tbody>
+</table>
+{% endblock content %}
